@@ -22,5 +22,10 @@ jobs:
       - name: configure
         run: cmake -S . -B build
 
-      - name: build and test
+      - name: build
         run: cmake --build build
+
+      - name: test
+        run: |
+          cd build
+          make && ctest
