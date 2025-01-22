@@ -19,7 +19,7 @@ TEST(ProgUtils, ShouldReturnDemangledName) {
   EXPECT_EQ(std::string{}, demangle("!!!"));
   EXPECT_EQ(std::string{"std::ignore"}, demangle("_ZStL6ignore"));
   EXPECT_EQ(
-      std::string{"std::vector<double, std::allocator<double> >::~vector()"},
+      std::string{"std::vector<double, std::allocator<double>>::~vector()"},
       demangle("_ZNSt6vectorIdSaIdEED1Ev"));
 }
 
